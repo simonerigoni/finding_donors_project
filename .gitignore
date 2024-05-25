@@ -1,15 +1,18 @@
-# Ignore the python compiled files
+# Generic file extensions to ignore
 
+## Python compiled files
 *.pyc
 
-# Ignore the venv directories and configuration
+# My project folders and files to ignore
 
-Include/
-Lib/
-Scripts/
-pyvenv.cfg
+## Virtual enviroment folder
+.venv/
 
-# Ignore the jupyter directories
+## Snippets of code and other stuff
+others/
 
-.ipynb_checkpoints/
-share/
+## Logs
+logs/
+
+## pycodestyle reports
+pycodestyle/*.txt
