@@ -101,7 +101,7 @@ I have compared the results of three models:
 - **Support Vector Machines**
 - **AdaBoost**
 
-![Results](images/results.JPG)
+![Results](images/results.jpg)
 
 Becasue the dataset is pretty imbalanced to evaluate the resutls I have used **F-1 Score**. As explained wonderfully in this [post](http://www.davidsbatista.net/blog/2018/08/19/NLP_Metrics/) **Accurcay** is not indicated for imbalanced dataset.
 
@@ -109,7 +109,7 @@ Becasue the dataset is pretty imbalanced to evaluate the resutls I have used **F
 
 Finally I have extracted the feature importance:
 
-![Results](images/feature_importance.JPG)
+![Results](images/feature_importance.png)
 
 ## List of activities
 
