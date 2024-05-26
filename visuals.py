@@ -55,7 +55,8 @@ def distribution(data, transformed=False, plt_show=True):
 
         # Calculate dynamic y-ticks
         max_count = data[feature].value_counts().max()
-        y_ticks = list(range(0, max_count + 1, max(1, max_count // 4)))
+        #y_ticks = list(range(0, max_count + 1, max(1, max_count // 4)))
+        y_ticks = list(np.round(np.quantile(np.arange(0, max_count + 1), [0, 0.25, 0.5, 0.75])).astype(int))
         ax.set_yticks(y_ticks)
         ax.set_yticklabels([f">{tick}" if tick == y_ticks[-1] else str(tick) for tick in y_ticks])
 
@@ -182,14 +183,11 @@ def feature_plot(importances, X_train, y_train, plt_show=True):
     values = importances[indices][:5]
 
     # Creat the plot
-    fig = plt.figure(figsize=(11, 5))
-    plt.title("Normalized Weights for First Five Most Predictive Features",
-              fontsize=16, y=0.99)
-    plt.bar(np.arange(5), values, width=0.6, align="center",
-            color='#00A000', label="Feature Weight")
-    plt.bar(np.arange(5) - 0.3, np.cumsum(values), width=0.2,
-            align="center", color='#00A0A0', label="Cumulative Feature Weight")
-    plt.xticks(np.arange(5), columns)
+    fig = plt.figure(figsize=(11, 8))
+    plt.title("Normalized Weights for First Five Most Predictive Features", fontsize=16, y=0.99)
+    plt.bar(np.arange(5), values, width=0.6, align="center", color='#00A000', label="Feature Weight")
+    plt.bar(np.arange(5) - 0.3, np.cumsum(values), width=0.2, align="center", color='#00A0A0', label="Cumulative Feature Weight")
+    plt.xticks(np.arange(5), columns, rotation=45, ha='right')
     plt.xlim((-0.5, 4.5))
     plt.ylabel("Weight", fontsize=12)
     plt.xlabel("Feature", fontsize=12)
