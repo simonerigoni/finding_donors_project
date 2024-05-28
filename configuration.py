@@ -20,8 +20,6 @@ def create_folders(folders=[DATA_FOLDER, IMAGES_FOLDER]):
 
     Returns:
         None
-
-
     """
     if isinstance(folders, list):
         pass

@@ -35,8 +35,6 @@ def distribution(data, transformed=False, plt_show=True):
     Returns:
         None
     """
-
-    # Create figure
     fig = plt.figure(figsize=(11, 5))
 
     # Skewed feature plotting
@@ -99,8 +97,6 @@ def evaluate(results, accuracy, f1, plt_show=True):
     Returns:
         None
     """
-
-    # Create figure
     fig, ax = plt.subplots(2, 3, figsize=(11, 8))
 
     # Constants
