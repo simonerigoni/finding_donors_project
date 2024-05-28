@@ -89,9 +89,9 @@ Check out `.\pycodestyle\format_and_lint.cmd`
 
 You can open _finding_donors.ipynb_ and run each cell and check their results.
 
-You can also run the command `jupyter notebook finding_donors.ipynb`.
+You can also run the command `ipython -c "%run finding_donors.ipynb"`.
 
-To convert the notebook in HTML format run `jupyter nbconvert finding_donors.ipynb`.
+To convert the notebook in HTML format run `jupyter nbconvert finding_donors.ipynb --to html`.
 
 ## Results
 

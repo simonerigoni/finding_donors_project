@@ -7,7 +7,10 @@
 # Define the files to be processed
 FILES=(
     "../configuration.py"
-    "../visuals.py"
+    "..\visuals.py",
+    "..\tests\test_configuration.py",
+    "..\tests\test_jupyter_notebook.py",
+    "..\tests\test_visuals.py"
 )
 
 # Loop through each file and run autopep8 and pycodestyle

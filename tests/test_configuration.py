@@ -20,8 +20,8 @@ def test_create_folders():
         pass
     else:
         shutil.rmtree(test_folder)
-    
-    configuration.create_folders(test_folder)       
+
+    configuration.create_folders(test_folder)
     test_result = os.path.exists(test_folder)
     shutil.rmtree(test_folder)
     assert test_result

@@ -54,16 +54,20 @@ def distribution(data, transformed=False, plt_show=True):
 
         # Calculate dynamic y-ticks
         max_count = data[feature].value_counts().max()
-        #y_ticks = list(range(0, max_count + 1, max(1, max_count // 4)))
-        y_ticks = list(np.round(np.quantile(np.arange(0, max_count + 1), [0, 0.25, 0.5, 0.75])).astype(int))
+        # y_ticks = list(range(0, max_count + 1, max(1, max_count // 4)))
+        y_ticks = list(np.round(np.quantile(
+            np.arange(0, max_count + 1), [0, 0.25, 0.5, 0.75])).astype(int))
         ax.set_yticks(y_ticks)
-        ax.set_yticklabels([f">{tick}" if tick == y_ticks[-1] else str(tick) for tick in y_ticks])
+        ax.set_yticklabels(
+            [f">{tick}" if tick == y_ticks[-1] else str(tick) for tick in y_ticks])
 
     # Plot aesthetics
     if transformed is True:
-        fig.suptitle("Log-transformed Distributions of Continuous Census Data Features", fontsize=16, y=0.99)
+        fig.suptitle(
+            "Log-transformed Distributions of Continuous Census Data Features", fontsize=16, y=0.99)
     else:
-        fig.suptitle("Skewed Distributions of Continuous Census Data Features", fontsize=16, y=0.99)
+        fig.suptitle(
+            "Skewed Distributions of Continuous Census Data Features", fontsize=16, y=0.99)
 
     # fig.tight_layout()
     plt.subplots_adjust(wspace=0.4)
@@ -109,7 +113,8 @@ def evaluate(results, accuracy, f1, plt_show=True):
             for i in np.arange(3):
 
                 # Creative plot code
-                ax[j//3, j % 3].bar(i+k*bar_width, results[learner][i][metric], width=bar_width, color=colors[k])
+                ax[j//3, j % 3].bar(i+k*bar_width, results[learner]
+                                    [i][metric], width=bar_width, color=colors[k])
                 ax[j//3, j % 3].set_xticks([0.45, 1.45, 2.45])
                 ax[j//3, j % 3].set_xticklabels(["1%", "10%", "100%"])
                 ax[j//3, j % 3].set_xlabel("Training Set Size")
@@ -132,10 +137,14 @@ def evaluate(results, accuracy, f1, plt_show=True):
     ax[1, 2].set_title("F-score on Testing Set")
 
     # Add horizontal lines for naive predictors
-    ax[0, 1].axhline(y=accuracy, xmin=-0.1, xmax=3.0, linewidth=1, color='k', linestyle='dashed')
-    ax[1, 1].axhline(y=accuracy, xmin=-0.1, xmax=3.0, linewidth=1, color='k', linestyle='dashed')
-    ax[0, 2].axhline(y=f1, xmin=-0.1, xmax=3.0, linewidth=1, color='k', linestyle='dashed')
-    ax[1, 2].axhline(y=f1, xmin=-0.1, xmax=3.0, linewidth=1, color='k', linestyle='dashed')
+    ax[0, 1].axhline(y=accuracy, xmin=-0.1, xmax=3.0,
+                     linewidth=1, color='k', linestyle='dashed')
+    ax[1, 1].axhline(y=accuracy, xmin=-0.1, xmax=3.0,
+                     linewidth=1, color='k', linestyle='dashed')
+    ax[0, 2].axhline(y=f1, xmin=-0.1, xmax=3.0, linewidth=1,
+                     color='k', linestyle='dashed')
+    ax[1, 2].axhline(y=f1, xmin=-0.1, xmax=3.0, linewidth=1,
+                     color='k', linestyle='dashed')
 
     # Set y-limits for score panels
     ax[0, 1].set_ylim((0, 1))
@@ -148,11 +157,13 @@ def evaluate(results, accuracy, f1, plt_show=True):
     for i, learner in enumerate(results.keys()):
         patches.append(mpatches.Patch(color=colors[i], label=learner))
 
-    plt.legend(handles=patches, bbox_to_anchor=(-1.5, 2.75), loc='upper center', borderaxespad=0., ncol=3, fontsize='x-large')
+    plt.legend(handles=patches, bbox_to_anchor=(-1.5, 2.75),
+               loc='upper center', borderaxespad=0., ncol=3, fontsize='x-large')
 
     # Aesthetics
-    plt.suptitle("Performance Metrics for Three Supervised Learning Models", fontsize=16, y=0.99)
-    
+    plt.suptitle(
+        "Performance Metrics for Three Supervised Learning Models", fontsize=16, y=0.99)
+
     # plt.tight_layout() # To avoid: UserWarning: Tight layout not applied. tight_layout cannot make Axes width small enough to accommodate all Axes decorations
     plt.subplots_adjust(top=0.8, hspace=0.4, wspace=0.4)
     # fig.set_constrained_layout(True)
@@ -183,9 +194,12 @@ def feature_plot(importances, X_train, y_train, plt_show=True):
 
     # Creat the plot
     fig = plt.figure(figsize=(11, 8))
-    plt.title("Normalized Weights for First Five Most Predictive Features", fontsize=16, y=0.99)
-    plt.bar(np.arange(5), values, width=0.6, align="center", color='#00A000', label="Feature Weight")
-    plt.bar(np.arange(5) - 0.3, np.cumsum(values), width=0.2, align="center", color='#00A0A0', label="Cumulative Feature Weight")
+    plt.title("Normalized Weights for First Five Most Predictive Features",
+              fontsize=16, y=0.99)
+    plt.bar(np.arange(5), values, width=0.6, align="center",
+            color='#00A000', label="Feature Weight")
+    plt.bar(np.arange(5) - 0.3, np.cumsum(values), width=0.2,
+            align="center", color='#00A0A0', label="Cumulative Feature Weight")
     plt.xticks(np.arange(5), columns, rotation=45, ha='right')
     plt.xlim((-0.5, 4.5))
     plt.ylabel("Weight", fontsize=12)
