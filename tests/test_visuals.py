@@ -1,6 +1,6 @@
-# Test configuration
+# Test visuals
 #
-# python test_configuration.py
+# python test_visuals.py
 
 import os
 import numpy as np
