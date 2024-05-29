@@ -68,3 +68,14 @@ def test_feature_plot():
     test_result = os.path.exists(output_image_path)
     os.remove(output_image_path)
     assert test_result
+
+
+def test_feature_plot():
+    test_data_heatmap_confusion_matrix = np.random.rand(2, 2)
+    vs.heatmap_confusion_matrix(test_data_heatmap_confusion_matrix, 'Testing confusion matrix', plt_show=False)
+
+    output_image_path = configuration.IMAGES_FOLDER + 'heatmap_confusion_matrix.png'
+
+    test_result = os.path.exists(output_image_path)
+    os.remove(output_image_path)
+    assert test_result

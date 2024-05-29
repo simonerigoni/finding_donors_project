@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd
+import seaborn as sns
 from sklearn.metrics import f1_score, accuracy_score
 
 
@@ -28,9 +29,9 @@ def distribution(data, transformed=False, plt_show=True):
     Visualization code for displaying skewed distributions of features.
 
     Parameters:
-        data: data
-        transformed: if True the input has been Log-transformed
-        plt_show: if True the plot will be shown. Otherwise the plot will be saved in IMAGES_FOLDER
+        data: Data
+        transformed: If True the input has been Log-transformed
+        plt_show: If True the plot will be shown. Otherwise the plot will be saved in IMAGES_FOLDER
 
     Returns:
         None
@@ -89,10 +90,10 @@ def evaluate(results, accuracy, f1, plt_show=True):
     Visualization code to display results of various learners.
 
     Parameters:
-        results:
+        results: Results
         accuracy: The score for the naive predictor
         f1: The score for the naive predictor
-        plt_show: if True the plot will be shown. Otherwise the plot will be saved in IMAGES_FOLDER
+        plt_show: If True the plot will be shown. Otherwise the plot will be saved in IMAGES_FOLDER
 
     Returns:
         None
@@ -175,10 +176,10 @@ def feature_plot(importances, X_train, y_train, plt_show=True):
     Plot feature.
 
     Parameters:
-        importances:
-        X_train:
-        y_train:
-        plt_show: if True the plot will be shown. Otherwise the plot will be saved in IMAGES_FOLDER
+        importances: Importances
+        X_train: X training values
+        y_train: Y training values
+        plt_show: If True the plot will be shown. Otherwise the plot will be saved in IMAGES_FOLDER
 
     Returns:
         None
@@ -208,6 +209,34 @@ def feature_plot(importances, X_train, y_train, plt_show=True):
         plt.show()
     else:
         plt.savefig(configuration.IMAGES_FOLDER + 'feature_plot.png')
+
+
+def heatmap_confusion_matrix(data, title, plt_show=True):
+    """
+    Confusion matrix heatmap visualization.
+
+    Parameters:
+        data: Data
+        title: Title
+        plt_show: If True the plot will be shown. Otherwise the plot will be saved in IMAGES_FOLDER
+
+    Returns:
+        None
+    """
+    plt.figure()
+    sns.heatmap(data, annot = True, annot_kws = {"size" : 30}, cmap = 'Blues', square = True, fmt = '.3f')
+    plt.ylabel('True label')
+    plt.xlabel('Predicted label')
+    plt.title(title)
+
+    if plt_show is True:
+        plt.show()
+    else:
+        output_image_path = configuration.IMAGES_FOLDER
+
+        output_image_path = output_image_path + 'heatmap_confusion_matrix.png'
+
+        plt.savefig(output_image_path)
 
 
 if __name__ == '__main__':
@@ -247,5 +276,8 @@ if __name__ == '__main__':
     test_y_train_feature_plot = np.array([0, 1, 0])
     feature_plot(test_importances_feature_plot, test_X_train_feature_plot,
                  test_y_train_feature_plot, plt_show=False)
+
+    test_data_heatmap_confusion_matrix = np.random.rand(2, 2)
+    heatmap_confusion_matrix(test_data_heatmap_confusion_matrix, 'Testing confusion matrix', plt_show=False)
 else:
     pass
