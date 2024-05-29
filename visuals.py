@@ -224,7 +224,8 @@ def heatmap_confusion_matrix(data, title, plt_show=True):
         None
     """
     plt.figure()
-    sns.heatmap(data, annot = True, annot_kws = {"size" : 30}, cmap = 'Blues', square = True, fmt = '.3f')
+    sns.heatmap(data, annot=True, annot_kws={
+                "size": 30}, cmap='Blues', square=True, fmt='.3f')
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.title(title)
@@ -278,6 +279,7 @@ if __name__ == '__main__':
                  test_y_train_feature_plot, plt_show=False)
 
     test_data_heatmap_confusion_matrix = np.random.rand(2, 2)
-    heatmap_confusion_matrix(test_data_heatmap_confusion_matrix, 'Testing confusion matrix', plt_show=False)
+    heatmap_confusion_matrix(
+        test_data_heatmap_confusion_matrix, 'Testing confusion matrix', plt_show=False)
 else:
     pass

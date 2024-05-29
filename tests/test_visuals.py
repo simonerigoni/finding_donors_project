@@ -72,7 +72,8 @@ def test_feature_plot():
 
 def test_feature_plot():
     test_data_heatmap_confusion_matrix = np.random.rand(2, 2)
-    vs.heatmap_confusion_matrix(test_data_heatmap_confusion_matrix, 'Testing confusion matrix', plt_show=False)
+    vs.heatmap_confusion_matrix(
+        test_data_heatmap_confusion_matrix, 'Testing confusion matrix', plt_show=False)
 
     output_image_path = configuration.IMAGES_FOLDER + 'heatmap_confusion_matrix.png'
 
