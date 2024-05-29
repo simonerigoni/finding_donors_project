@@ -2,7 +2,7 @@
 
 # Run autopep8 and pycodestyle on the specified files
 # chmod +x format_and_lint.sh
-# ./all_format_check.sh
+# ./format_and_lint.sh
 
 # Define the files to be processed
 FILES=(

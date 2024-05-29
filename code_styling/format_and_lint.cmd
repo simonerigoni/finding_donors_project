@@ -1,5 +1,5 @@
 rem Run autopep8 and pycodestyle on the specified files
-rem ./all_format_check.cmd
+rem ./format_and_lint.cmd
 
 @echo off
 setlocal

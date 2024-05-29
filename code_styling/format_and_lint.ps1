@@ -1,5 +1,5 @@
 # Run autopep8 and pycodestyle on the specified files
-# ./all_format_check.ps1
+# ./format_and_lint.ps1
 
 # Define the files to be processed
 $files = @(

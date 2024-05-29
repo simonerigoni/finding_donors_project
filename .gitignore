@@ -14,5 +14,5 @@ others/
 ## Logs
 logs/
 
-## pycodestyle reports
-pycodestyle/*.txt
+## Code styling reports
+code_styling/*.txt

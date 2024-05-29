@@ -65,7 +65,7 @@ From the project folder run `pytest`
 
 To run a single test: `pytest .\tests\test_configuration.py::test_create_folders`
 
-## PEP8
+## Code styling
 
 [PEP8](https://peps.python.org/pep-0008/) is the style guide for Python code, and it's good practice to follow it to ensure your code is readable and consistent.
 
@@ -73,17 +73,17 @@ To check and format my code according to PEP8 I am using:
 - [pycodestyle](https://pypi.org/project/pycodestyle/): tool to check the code against PEP 8 conventions.
 - [autopep8](https://pypi.org/project/autopep8/): tool to automatically format Python code according to PEP 8 standards.
 
-To run pycodestyle on all files in the project folder and create a report: `pycodestyle --statistics --count . > pycodestyle/report.txt`
+To run pycodestyle on all files in the project folder and create a report: `pycodestyle --statistics --count . > code_styling/report.txt`
 
 To run autopep8 on all files in the project folder: `autopep8 --recursive --in-place .`
 
 I prefere to check and update one file at the time because the previous recursive commands affect also `.venv\` files. For example:
 
-`pycodestyle .\configuration.py > .\pycodestyle\configuration_report.txt`
+`pycodestyle .\configuration.py > .\code_styling\configuration_report.txt`
 
 `autopep8 --in-place .\configuration.py`
 
-Check out `.\pycodestyle\format_and_lint.cmd`
+Check out `.\code_styling\format_and_lint.cmd`
 
 ## Running the code
 
