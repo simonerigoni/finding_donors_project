@@ -6,11 +6,11 @@
 
 # Define the files to be processed
 FILES=(
-    "..\utils\configuration.py"
-    "..\utils\visuals.py",
-    "..\tests\test_configuration.py",
-    "..\tests\test_jupyter_notebook.py",
-    "..\tests\test_visuals.py"
+    "./utils/configuration.py"
+    "./utils/visuals.py",
+    "./tests/test_configuration.py",
+    "./tests/test_jupyter_notebook.py",
+    "./tests/test_visuals.py"
 )
 
 # Loop through each file and run autopep8 and pycodestyle
@@ -25,7 +25,7 @@ do
     autopep8 --in-place "$file"
 
     # Check the file for PEP 8 compliance and save the report
-    pycodestyle "$file" > "./${BASENAME}_report.txt"
+    pycodestyle "$file" > "./code_styling/${BASENAME}_report.txt"
 
-    echo "Report saved to ./${BASENAME}_report.txt"
+    echo "Report saved to ./code_styling/${BASENAME}_report.txt"
 done

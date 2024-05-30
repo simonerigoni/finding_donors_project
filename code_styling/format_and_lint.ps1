@@ -3,11 +3,11 @@
 
 # Define the files to be processed
 $files = @(
-    "..\utils\configuration.py",
-    "..\utils\visuals.py",
-    "..\tests\test_configuration.py",
-    "..\tests\test_jupyter_notebook.py",
-    "..\tests\test_visuals.py"
+    ".\utils\configuration.py",
+    ".\utils\visuals.py",
+    ".\tests\test_configuration.py",
+    ".\tests\test_jupyter_notebook.py",
+    ".\tests\test_visuals.py"
 )
 
 # Loop through each file and run autopep8 and pycodestyle
@@ -21,7 +21,7 @@ foreach ($file in $files) {
     & autopep8 --in-place $file
 
     # Check the file for PEP 8 compliance and save the report
-    & pycodestyle $file > ".\${basename}_report.txt"
+    & pycodestyle $file > ".\code_styling\${basename}_report.txt"
 
-    Write-Host "Report saved to .\${basename}_report.txt"
+    Write-Host "Report saved to .\code_styling\${basename}_report.txt"
 }

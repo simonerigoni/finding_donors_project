@@ -5,7 +5,7 @@ rem ./format_and_lint.cmd
 setlocal
 
 rem Define the files to be processed
-set "FILES=..\utils\configuration.py ..\utils\visuals.py ..\tests\test_configuration.py ..\tests\test_jupyter_notebook.py ..\tests\test_visuals.py"
+set "FILES=.\utils\configuration.py .\utils\visuals.py .\tests\test_configuration.py .\tests\test_jupyter_notebook.py .\tests\test_visuals.py"
 
 rem Loop through each file and run autopep8 and pycodestyle
 for %%f in (%FILES%) do (
@@ -17,9 +17,9 @@ for %%f in (%FILES%) do (
         autopep8 --in-place %%f
 
         rem Check the file for PEP 8 compliance and save the report
-        pycodestyle %%f > .\%%~nf_report.txt
+        pycodestyle %%f > .\code_styling\%%~nf_report.txt
 
-        echo Report saved to .\%%~nf_report.txt
+        echo Report saved to .\code_styling\%%~nf_report.txt
     )
 )
 

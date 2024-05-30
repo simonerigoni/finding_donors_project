@@ -83,7 +83,7 @@ I prefere to check and update one file at the time because the previous recursiv
 
 `autopep8 --in-place .\utils\configuration.py`
 
-Check out `.\code_styling\format_and_lint.cmd`
+Check out the scripts in `.\code_styling`. From the project folder you can run `.\code_styling\format_and_lint.cmd`
 
 ## Running the code
 
