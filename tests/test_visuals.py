@@ -7,8 +7,8 @@ import numpy as np
 import pandas as pd
 
 
-import configuration
-import visuals as vs
+import utils.configuration as conf
+import utils.visuals as vs
 
 
 def test_distribution():
@@ -19,7 +19,7 @@ def test_distribution():
 
     vs.distribution(test_data_distribution, plt_show=False)
 
-    output_image_path = configuration.IMAGES_FOLDER + 'distribution.png'
+    output_image_path = conf.IMAGES_FOLDER + 'distribution.png'
 
     test_result = os.path.exists(output_image_path)
     os.remove(output_image_path)
@@ -42,7 +42,7 @@ def test_evaluate():
     vs.evaluate(test_results_evaluate, test_accuracy_evaluate,
                 test_f1_evaluate, plt_show=False)
 
-    output_image_path = configuration.IMAGES_FOLDER + 'evaluate.png'
+    output_image_path = conf.IMAGES_FOLDER + 'evaluate.png'
 
     test_result = os.path.exists(output_image_path)
     os.remove(output_image_path)
@@ -63,7 +63,7 @@ def test_feature_plot():
     vs.feature_plot(test_importances_feature_plot, test_X_train_feature_plot,
                     test_y_train_feature_plot, plt_show=False)
 
-    output_image_path = configuration.IMAGES_FOLDER + 'feature_plot.png'
+    output_image_path = conf.IMAGES_FOLDER + 'feature_plot.png'
 
     test_result = os.path.exists(output_image_path)
     os.remove(output_image_path)
@@ -75,7 +75,7 @@ def test_feature_plot():
     vs.heatmap_confusion_matrix(
         test_data_heatmap_confusion_matrix, 'Testing confusion matrix', plt_show=False)
 
-    output_image_path = configuration.IMAGES_FOLDER + 'heatmap_confusion_matrix.png'
+    output_image_path = conf.IMAGES_FOLDER + 'heatmap_confusion_matrix.png'
 
     test_result = os.path.exists(output_image_path)
     os.remove(output_image_path)

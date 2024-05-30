@@ -1,6 +1,6 @@
 # Configuration
 #
-# python configuration.py
+# python -m utils.configuration
 
 import os
 
