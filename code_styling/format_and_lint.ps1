@@ -3,8 +3,8 @@
 
 # Define the files to be processed
 $files = @(
-    "..\configuration.py",
-    "..\visuals.py",
+    "..\utils\configuration.py",
+    "..\utils\visuals.py",
     "..\tests\test_configuration.py",
     "..\tests\test_jupyter_notebook.py",
     "..\tests\test_visuals.py"

@@ -5,7 +5,7 @@ rem ./format_and_lint.cmd
 setlocal
 
 rem Define the files to be processed
-set "FILES=..\configuration.py ..\visuals.py ..\tests\test_configuration.py ..\tests\test_jupyter_notebook.py ..\tests\test_visuals.py"
+set "FILES=..\utils\configuration.py ..\utils\visuals.py ..\tests\test_configuration.py ..\tests\test_jupyter_notebook.py ..\tests\test_visuals.py"
 
 rem Loop through each file and run autopep8 and pycodestyle
 for %%f in (%FILES%) do (

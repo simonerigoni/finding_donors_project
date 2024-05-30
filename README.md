@@ -79,9 +79,9 @@ To run autopep8 on all files in the project folder: `autopep8 --recursive --in-p
 
 I prefere to check and update one file at the time because the previous recursive commands affect also `.venv\` files. For example:
 
-`pycodestyle .\configuration.py > .\code_styling\configuration_report.txt`
+`pycodestyle .\utils\configuration.py > .\code_styling\configuration_report.txt`
 
-`autopep8 --in-place .\configuration.py`
+`autopep8 --in-place .\utils\configuration.py`
 
 Check out `.\code_styling\format_and_lint.cmd`
 
