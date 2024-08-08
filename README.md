@@ -29,6 +29,8 @@ More informations in `requirements.txt`. I am providing a simplified version of 
 
 To create a complete requirements file you can run `pip freeze > requirements.txt` and to install all python packages in it you can run `pip install -r requirements.txt`.
 
+To setup a new enviroment and install all requirements you can go in folder `others` and run `setup.cmd`
+
 ## Data
 
 The modified census dataset consists of approximately 32,000 data points, with each datapoint having 13 features. This dataset is a modified version of the dataset published in the paper *"Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",* by Ron Kohavi. You may find this paper [online](https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf), with the original dataset hosted on [UCI](https://archive.ics.uci.edu/ml/datasets/Census+Income).
@@ -83,7 +85,7 @@ I prefere to check and update one file at the time because the previous recursiv
 
 `autopep8 --in-place .\utils\configuration.py`
 
-Check out the scripts in `.\code_styling`. From the project folder you can run `.\code_styling\format_and_lint.cmd`
+You can go in folder `code_styling` and run `format_and_lint.cmd`.
 
 ## Running the code
 
@@ -117,7 +119,7 @@ In the [TODO](TODO.md) file you can find the list of tasks and on going activiti
 
 ## Licensing and acknowledgements
 
-Thanks Udacity [Udacity](https://eu.udacity.com/) for the dataset.
+Thanks [Udacity](https://eu.udacity.com/) for the dataset.
 
 ## Outro
 

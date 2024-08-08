@@ -8,8 +8,11 @@
 ## Virtual enviroment folder
 .venv/
 
-## Snippets of code and other stuff
-others/
+## pytest cache files 
+.pytest_cache/
+
+## Temp stuff
+temp/
 
 ## Logs
 logs/
