@@ -26,5 +26,9 @@ python -m pip install --upgrade pip
 # Install the required packages from requirements.txt
 pip install -r requirements.txt
 
+# Set git config
+# git config user.name "your_name"
+# git config user.email your_email@email.com
+
 # Deactivate the virtual environment after installation (optional)
 deactivate
