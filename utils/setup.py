@@ -5,7 +5,7 @@
 import os
 
 
-import utils.configuration as conf
+import utils.config as conf
 
 
 def create_folders(folders=[conf.DATA_FOLDER, conf.IMAGES_FOLDER]):

@@ -19,7 +19,7 @@ Overview of the status of the tasks of this project.
 
 - [x] Project initialization
 - [x] Refine requirment.txt
-- [x] Add testing configuration.py
+- [x] Add testing config.py
 - [x] Add testing visuals.py
 - [x] Complete finding_donors.ipynb and answer questions
 - [x] Fix FutureWarning in finding_donors.ipynb

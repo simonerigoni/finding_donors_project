@@ -1,6 +1,6 @@
-# Configuration
+# Config
 #
-# python -m utils.configuration
+# python -m utils.config
 
 
 DATA_FOLDER = 'data/'
@@ -10,7 +10,7 @@ RANDOM_STATE = 42
 
 
 if __name__ == "__main__":
-    print("Configuration")
+    print("Config")
     print(f"{DATA_FOLDER = }")
     print(f"{IMAGES_FOLDER = }")
     print(f"{BETA = }")

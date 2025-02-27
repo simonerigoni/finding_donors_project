@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 
-import utils.configuration as conf
+import utils.config as conf
 import utils.visuals as vs
 
 

@@ -1,9 +1,9 @@
-# Test configuration
+# Test config
 #
-# python test_configuration.py
+# python test_config.py
 
 
-import utils.configuration as conf
+import utils.config as conf
 
 
 def test__dummy():

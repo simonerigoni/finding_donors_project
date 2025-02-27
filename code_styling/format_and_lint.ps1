@@ -23,7 +23,7 @@ foreach ($file in $files) {
     # Get the full path of the file
     $filePath = $file.FullName
 
-    # Get the base name of the file (e.g., "configuration" from "configuration.py")
+    # Get the base name of the file (e.g., "config" from "config.py")
     $basename = [System.IO.Path]::GetFileNameWithoutExtension($filePath)
 
     Write-Host "Processing $filePath..."

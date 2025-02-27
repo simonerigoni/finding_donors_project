@@ -21,7 +21,7 @@ import seaborn as sns
 from sklearn.metrics import f1_score, accuracy_score
 
 
-import utils.configuration as conf
+import utils.config as conf
 import utils.setup as setu
 
 
