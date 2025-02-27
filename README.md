@@ -65,7 +65,7 @@ The code is provided in the [Jupyter Notebook](http://ipython.org/notebook.html)
 
 From the project folder run `pytest`
 
-To run a single test: `pytest .\tests\test_configuration.py::test_create_folders`
+To run a single test: `pytest .\tests\test_setup.py::test_create_folders`
 
 ## Code styling
 
