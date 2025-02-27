@@ -1,4 +1,4 @@
-# Project
+# Finding Donors for CharityML Project
 
 ## Introduction
 
