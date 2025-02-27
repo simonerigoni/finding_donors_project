@@ -1,4 +1,4 @@
-# Generic file extensions to ignore
+# Stuff to ignore
 
 ## Python compiled files
 *.pyc
