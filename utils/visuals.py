@@ -22,6 +22,10 @@ from sklearn.metrics import f1_score, accuracy_score
 
 
 import utils.configuration as conf
+import utils.setup as setu
+
+
+setu.create_folders()
 
 
 def distribution(data, transformed=False, plt_show=True):
@@ -240,8 +244,8 @@ def heatmap_confusion_matrix(data, title, plt_show=True):
         plt.savefig(output_image_path)
 
 
-if __name__ == '__main__':
-    print('Visuals')
+if __name__ == "__main__":
+    print("Visuals")
 
     test_data_distribution = pd.DataFrame({
         'capital-gain': [0, 0, 0, 0, 5000, 10000, 0, 0, 0, 0, 5000, 0],

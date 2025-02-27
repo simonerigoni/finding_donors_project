@@ -1,11 +1,14 @@
 # Run autopep8 and pycodestyle on the specified files
 # ./format_and_lint.ps1
 
+# Configurable variables
+$venvDir = ".venv"
+
 # Change to the parent directory
 cd ..
 
 # Define the files to be processed
-$files = Get-ChildItem -Path . -Filter *.py -Recurse | Where-Object { $_.FullName -notmatch "\\.venv\\" }
+$files = Get-ChildItem -Path . -Filter *.py -Recurse | Where-Object { $_.FullName -notmatch $venvDir }
 
 # Activate the virtual environment
 # Note: The activation command varies based on the operating system and shell

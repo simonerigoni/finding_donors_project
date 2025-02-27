@@ -23,13 +23,13 @@ This project uses Python 3.10.4 and the most important packages are:
 - [matplotlib](http://matplotlib.org/)
 - [scikit-learn](http://scikit-learn.org/stable/)
 
-To create the virtual enviroment you can run `python -m venv .venv`.
+To setup a new local enviroment and install all dependencies you can run `./setup.ps1`
+
+Alternatively to create the virtual enviroment you can run `python -m venv .venv`.
 
 More informations in `requirements.txt`. I am providing a simplified version of the file and letting pip handle the dependencies to avoid maintenance overhead.
 
 To create a complete requirements file you can run `pip freeze > requirements.txt` and to install all python packages in it you can run `pip install -r requirements.txt`.
-
-To setup a new enviroment and install all requirements you can go in folder `others` and run `setup.cmd`
 
 ## Data
 
