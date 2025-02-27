@@ -9,11 +9,6 @@ import shutil
 import utils.setup as setu
 
 
-def test__dummy():
-    test_result = 42 == 42
-    assert test_result
-
-
 def test_create_folders():
     test_folder = 'test_folder'
     if not os.path.exists(test_folder):
