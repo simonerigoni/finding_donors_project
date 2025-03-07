@@ -1,9 +1,9 @@
-# Stuff to ignore
+# General stuff to ignore
 
 ## Python compiled files
 *.pyc
 
-# My project folders and files to ignore
+# Actual project folders and files to ignore
 
 ## Virtual enviroment folder
 .venv/
@@ -17,5 +17,5 @@ temp/
 ## Logs
 logs/
 
-## Code styling reports
-code_styling/*.txt
+## Code style reports
+code_style/

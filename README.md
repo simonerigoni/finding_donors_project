@@ -16,14 +16,14 @@ The goal of this project is to apply Supervised learning techniques on data coll
 
 ## Software and libraries
 
-This project uses Python 3.10.4 and the most important packages are:
+This project uses Python 3.11.9 and the most important packages are:
 
 - [NumPy](http://www.numpy.org/)
 - [Pandas](http://pandas.pydata.org)
 - [matplotlib](http://matplotlib.org/)
 - [scikit-learn](http://scikit-learn.org/stable/)
 
-To setup a new local enviroment and install all dependencies you can run `./setup.ps1`
+To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`
 
 Alternatively to create the virtual enviroment you can run `python -m venv .venv`.
 
@@ -63,9 +63,11 @@ The code is provided in the [Jupyter Notebook](http://ipython.org/notebook.html)
 
 ## Testing
 
-From the project folder run `pytest`
+You can run `.\my_scripts\Test.ps1`.
 
-To run a single test: `pytest .\tests\test_setup.py::test_create_folders`
+Alternatively from the project folder run `pytest`
+
+To run a single test: `pytest .\tests\test_setup.py::test_create_folders_default`
 
 ## Code styling
 
@@ -75,17 +77,17 @@ To check and format my code according to PEP8 I am using:
 - [pycodestyle](https://pypi.org/project/pycodestyle/): tool to check the code against PEP 8 conventions.
 - [autopep8](https://pypi.org/project/autopep8/): tool to automatically format Python code according to PEP 8 standards.
 
-To run pycodestyle on all files in the project folder and create a report: `pycodestyle --statistics --count . > code_styling/report.txt`
+You can run `.\my_scripts\FormatAndLint.ps1`.
+
+Alternatively to run pycodestyle on all files in the project folder and create a report: `pycodestyle --statistics --count . > code_style\report.txt`
 
 To run autopep8 on all files in the project folder: `autopep8 --recursive --in-place .`
 
-I prefere to check and update one file at the time because the previous recursive commands affect also `.venv\` files. For example:
+I prefere to check and update one file at the time because the previous recursive commands affect also `.\venv\` files. For example:
 
-`pycodestyle .\utils\config.py > .\code_styling\config_report.txt`
+`pycodestyle .\utils\config.py > .\code_style\config_report.txt`
 
 `autopep8 --in-place .\utils\config.py`
-
-You can go in folder `code_styling` and run `format_and_lint.cmd`.
 
 ## Running the code
 
