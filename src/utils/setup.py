@@ -1,14 +1,14 @@
 # Setup
 #
-# python -m utils.setup
+# python -m src.utils.setup
 
 import os
 
 
-import utils.config as conf
+from src.config import DATA_FOLDER, IMAGES_FOLDER
 
 
-def create_folders(folders=[conf.DATA_FOLDER, conf.IMAGES_FOLDER]):
+def create_folders(folders=[DATA_FOLDER, IMAGES_FOLDER]):
     """
     Create folders.
 

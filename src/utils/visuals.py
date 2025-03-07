@@ -1,6 +1,6 @@
 # Visuals
 #
-# python -m utils.visuals
+# python -m src.utils.visuals
 
 
 # # Suppress matplotlib user warnings
@@ -21,8 +21,8 @@ import seaborn as sns
 from sklearn.metrics import f1_score, accuracy_score
 
 
-import utils.config as conf
-import utils.setup as setu
+from src.config import IMAGES_FOLDER
+import src.utils.setup as setu
 
 
 setu.create_folders()
@@ -78,7 +78,7 @@ def distribution(data, transformed=False, plt_show=True):
     if plt_show is True:
         plt.show()
     else:
-        output_image_path = conf.IMAGES_FOLDER
+        output_image_path = IMAGES_FOLDER
 
         if transformed is True:
             output_image_path = output_image_path + 'transformed_'
@@ -172,7 +172,7 @@ def evaluate(results, accuracy, f1, plt_show=True):
     if plt_show is True:
         plt.show()
     else:
-        plt.savefig(conf.IMAGES_FOLDER + 'evaluate.png')
+        plt.savefig(IMAGES_FOLDER + 'evaluate.png')
 
 
 def feature_plot(importances, X_train, y_train, plt_show=True):
@@ -212,7 +212,7 @@ def feature_plot(importances, X_train, y_train, plt_show=True):
     if plt_show is True:
         plt.show()
     else:
-        plt.savefig(conf.IMAGES_FOLDER + 'feature_plot.png')
+        plt.savefig(IMAGES_FOLDER + 'feature_plot.png')
 
 
 def heatmap_confusion_matrix(data, title, plt_show=True):
@@ -237,7 +237,7 @@ def heatmap_confusion_matrix(data, title, plt_show=True):
     if plt_show is True:
         plt.show()
     else:
-        output_image_path = conf.IMAGES_FOLDER
+        output_image_path = IMAGES_FOLDER
 
         output_image_path = output_image_path + 'heatmap_confusion_matrix.png'
 

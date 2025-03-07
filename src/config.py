@@ -1,6 +1,6 @@
 # Config
 #
-# python -m utils.config
+# python -m src.config
 
 
 DATA_FOLDER = 'data/'

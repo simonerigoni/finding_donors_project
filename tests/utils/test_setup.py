@@ -6,8 +6,8 @@ import os
 import shutil
 
 
-import utils.config as conf
-import utils.setup as setu
+import src.config as conf
+import src.utils.setup as setu
 
 
 def test_create_folders_default():

@@ -3,7 +3,7 @@
 # python test_config.py
 
 
-import utils.config as conf
+import src.config as conf
 
 
 def test_dummy():

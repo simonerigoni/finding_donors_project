@@ -7,8 +7,8 @@ import numpy as np
 import pandas as pd
 
 
-import utils.config as conf
-import utils.visuals as vs
+import src.config as conf
+import src.utils.visuals as vs
 
 
 def test_distribution():
