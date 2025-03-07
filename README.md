@@ -67,7 +67,7 @@ You can run `.\my_scripts\Test.ps1`.
 
 Alternatively from the project folder run `pytest`
 
-To run a single test: `pytest .\tests\test_setup.py::test_create_folders_default`
+To run a single test: `pytest .\tests\utils\test_setup.py::test_create_folders_default`
 
 ## Code styling
 
