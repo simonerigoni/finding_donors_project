@@ -42,7 +42,7 @@ if (-not (Test-Path $codeStyleFolder)) {
 }
 
 foreach ($file in $pythonFiles) {
-    $reportFile = Join-Path $codeStyleFolder "$($file.BaseName)_pycodestyle_report.txt"
+    $reportFile = Join-Path $codeStyleFolder "pycodestyle_$($file.BaseName)_report.txt"
     pycodestyle $file.FullName | Out-File $reportFile
     if ($LASTEXITCODE -ne 0) {
         Write-Host "pycodestyle found issues in $($file.FullName). Report saved to $reportFile" -ForegroundColor Yellow
