@@ -1,21 +1,23 @@
-# General stuff to ignore
+# Files, directories or patterns that should be excluded from Git tracking
 
-## Python compiled files
+# General stuff
+
+# Python compiled files
 *.pyc
 
-# Actual project folders and files to ignore
+# Actual project folders and files
 
-## Virtual enviroment folder
-.venv/
-
-## pytest cache files 
-.pytest_cache/
-
-## Temp stuff
+# Temp stuff
 temp/
 
-## Logs
+# Logs
 logs/
 
-## Code style reports
+# Virtual enviroment
+.venv/
+
+# pytest cache files 
+.pytest_cache/
+
+# Code style reports
 code_style/
