@@ -19,10 +19,10 @@ The goal of this project is to apply Supervised learning techniques on data coll
 
 This project uses Python 3.11 and the most important packages are:
 
-- [NumPy](http://www.numpy.org/)
-- [Pandas](http://pandas.pydata.org)
-- [matplotlib](http://matplotlib.org/)
-- [scikit-learn](http://scikit-learn.org/stable/)
+- [NumPy](https://www.numpy.org/)
+- [Pandas](https://pandas.pydata.org)
+- [matplotlib](https://matplotlib.org/)
+- [scikit-learn](https://scikit-learn.org/stable/)
 
 ## Local configuration
 
