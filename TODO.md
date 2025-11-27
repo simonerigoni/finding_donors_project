@@ -1,6 +1,6 @@
 # Finding Donors for CharityML Project
 
-## Introduction
+## TODO
 
 Overview of the status of the tasks of this project.
 
@@ -9,11 +9,11 @@ Overview of the status of the tasks of this project.
 
 ### To do
 
-- [ ]
+- [ ] Use uv and pre-commit
 
 ### In Progress
 
-- [ ]
+- [ ] None
 
 ### Done ✓
 
