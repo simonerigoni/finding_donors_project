@@ -96,11 +96,11 @@ Finally I have extracted the feature importance:
 
 ## List of activities
 
-In the [TODO](TODO.md) file you can find the list of tasks and on going activities.
+In the [TODO.md](TODO.md) file you can find the list of tasks and on going activities.
 
 ## Licensing and acknowledgements
 
-Have a look at [LICENSE](LICENSE.md) and many thanks to [Udacity](https://eu.udacity.com/) for the dataset.
+Have a look at [LICENSE.md](LICENSE.md) and many thanks to [Udacity](https://eu.udacity.com/) for the dataset.
 
 ## Outro
 
