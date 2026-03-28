@@ -25,7 +25,6 @@ if (Test-Path $venvFolder) {
     Write-Host "Virtual environment does not exist!" -ForegroundColor Green
 }
 
-# Delete specific files if needed
-
+# TODO: delete installed tools?
 
 Write-Host "Cleanup complete!" -ForegroundColor Green

@@ -1,0 +1,30 @@
+[project]
+name = "finding-donors-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "nbconvert>=7.17.0",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.408",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.14.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pyright]
+exclude = [".venv"]
+pythonVersion = "3.11"
+venvPath = "."
+venv = ".venv"

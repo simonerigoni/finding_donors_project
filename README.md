@@ -24,47 +24,40 @@ This project uses Python 3.11 and the most important packages are:
 - [matplotlib](https://matplotlib.org/)
 - [scikit-learn](https://scikit-learn.org/stable/)
 
-## Local configuration
-
-To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`
-
-Alternatively to create the virtual enviroment you can run `python -m venv .venv`.
-
-More informations in `requirements.txt`. I am providing a simplified version of the file and letting pip handle the dependencies to avoid maintenance overhead.
-
-To create a complete requirements file you can run `pip freeze > requirements.txt` and to install all python packages in it you can run `pip install -r requirements.txt`.
-
 ## Data
 
 Have a look at the `data` folder and its [DATA.md](data/DATA.md) file.
 
+## Local configuration
+
+To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`. It will install:
+
+* [Python](https://www.python.org/)
+* [uv](https://docs.astral.sh/uv/)
+* [Pre-commit](https://pre-commit.com/)
+
+## Code Quality
+
+Code quality is maintained through automated checks and linting using pre-commit.
+
+Pre-commit is a framework for managing and maintaining multi-language pre-commit hooks. A pre-commit hook is a script that runs before a commit operation in a version control system. This allows to shift left code quality checks and remediations. You can change the hooks by updateing the file `.pre-commit-config.yaml`.
+
+To trigger the pre-commit hooks without an actual commit you can run `pre-commit run --all-files -v`.
+
+It is also possible to run manully the individual tools:
+
+- `uv run ruff check --fix`
+- `uv run ruff format .`
+- `uv run pyright .`
+
 ## Testing
 
-You can run `.\my_scripts\Test.ps1`.
+Tests are implemented using `pytest` and coverage is tracked with `pytest-cov`. The detailed coverage report is genarated by the pre-commit hook and it is available in [COVERAGE.md](COVERAGE.md) file.
 
-Alternatively from the project folder run `pytest`
+It is also possible to run manully the individual tests:
 
-To run a single test: `pytest .\tests\utils\test_setup.py::test_create_folders_default`
-
-## Code styling
-
-[PEP8](https://peps.python.org/pep-0008/) is the style guide for Python code, and it's good practice to follow it to ensure your code is readable and consistent.
-
-To check and format my code according to PEP8 I am using:
-- [pycodestyle](https://pypi.org/project/pycodestyle/): tool to check the code against PEP 8 conventions.
-- [autopep8](https://pypi.org/project/autopep8/): tool to automatically format Python code according to PEP 8 standards.
-
-You can run `.\my_scripts\FormatAndLint.ps1`.
-
-Alternatively to run pycodestyle on all files in the project folder and create a report: `pycodestyle --statistics --count . > code_style\report.txt`
-
-To run autopep8 on all files in the project folder: `autopep8 --recursive --in-place .`
-
-I prefere to check and update one file at the time because the previous recursive commands affect also `.\venv\` files. For example:
-
-`pycodestyle .\utils\config.py > .\code_style\config_report.txt`
-
-`autopep8 --in-place .\utils\config.py`
+- `uv run pytest`
+- `uv run pytest tests/test_dummy.py::test_dummy`
 
 ## Running the code
 

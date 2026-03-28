@@ -12,5 +12,8 @@ temp/
 # Pytest cache
 .pytest_cache/
 
-# Code style reports
-code_style/
+# Ruff cache
+.ruff_cache/
+
+# pytest-cov stuff
+.coverage

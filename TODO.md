@@ -8,7 +8,7 @@ Overview of the status of the tasks of this project.
 
 ### To do
 
-- [ ] Use uv and pre-commit
+- [ ]
 
 ### In Progress
 
@@ -24,3 +24,4 @@ Overview of the status of the tasks of this project.
 - [x] Fix FutureWarning in finding_donors.ipynb
 - [x] Implement visuals.heatmap_confusion_matrix(data, title, plt_show=True) and replace old code for confusion matrix heatmap
 - [x] Add my_scripts/*.ps1
+- [x] Use uv and pre-commit
