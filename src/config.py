@@ -3,8 +3,8 @@
 # python -m src.config
 
 
-DATA_FOLDER = 'data/'
-IMAGES_FOLDER = 'images/'
+DATA_FOLDER = "data/"
+IMAGES_FOLDER = "images/"
 BETA = 0.5
 RANDOM_STATE = 42
 
