@@ -1,0 +1,7 @@
+name: Install uv
+description: Install uv with Github Action
+runs:
+  using: composite
+  steps:
+    - name: install uv
+      uses: astral-sh/setup-uv@v8.0.0
