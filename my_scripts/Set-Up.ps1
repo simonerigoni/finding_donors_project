@@ -29,7 +29,7 @@ foreach ($tool in $tools) {
     }
 }
 
-Write-Host "Running install pre-commit..."
+Write-Host "Running upgrade pip..."
 python -m pip install --upgrade pip
 
 Write-Host "Running install pre-commit..."
