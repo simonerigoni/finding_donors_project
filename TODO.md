@@ -8,7 +8,7 @@ Overview of the status of the tasks of this project.
 
 ### To do
 
-- [ ]
+- [ ] None
 
 ### In Progress
 
