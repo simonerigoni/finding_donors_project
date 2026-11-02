@@ -40,6 +40,13 @@
         ".python-version"
       ],
       "enabled": false
+    },
+    {
+      "description": "Keep Python at 3.11: no Python version updates (pyenv, docker, setup-python, uv)",
+      "matchDepNames": [
+        "python"
+      ],
+      "enabled": false
     }
   ]
 }
