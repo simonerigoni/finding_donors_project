@@ -17,7 +17,7 @@ The goal of this project is to apply Supervised learning techniques on data coll
 
 ## Software and libraries
 
-This project uses Python 3.11 and the most important packages are:
+This project uses Python 3.14 and the most important packages are:
 
 - [NumPy](https://www.numpy.org/)
 - [Pandas](https://pandas.pydata.org)
