@@ -32,11 +32,14 @@ Have a look at the `data` folder and its [DATA.md](data/DATA.md) file.
 
 ## Local configuration
 
-To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`. It will install:
+To set up a local environment and install all dependencies, run `uv sync` from the project folder.
 
-* [Python](https://www.python.org/)
-* [uv](https://docs.astral.sh/uv/)
-* [Pre-commit](https://pre-commit.com/)
+Then run the checks with:
+
+```bash
+uv run pre-commit run --all-files
+uv run pytest
+```
 
 ## Code Quality
 

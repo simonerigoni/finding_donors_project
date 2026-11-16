@@ -3,9 +3,9 @@
 # python test_visuals.py
 
 import os
+
 import numpy as np
 import pandas as pd
-
 
 import src.config as conf
 import src.utils.visuals as vs

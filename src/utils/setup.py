@@ -4,11 +4,10 @@
 
 import os
 
-
 from src.config import DATA_FOLDER, IMAGES_FOLDER
 
 
-def create_folders(folders=[DATA_FOLDER, IMAGES_FOLDER]):
+def create_folders(folders=None):
     """
     Create folders.
 
@@ -18,6 +17,8 @@ def create_folders(folders=[DATA_FOLDER, IMAGES_FOLDER]):
     Returns:
         None
     """
+    if folders is None:
+        folders = [DATA_FOLDER, IMAGES_FOLDER]
     if isinstance(folders, list):
         pass
     elif isinstance(folders, str):
