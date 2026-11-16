@@ -13,16 +13,14 @@
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
 
-
-from src.config import IMAGES_FOLDER
 import src.utils.setup as setu
-
+from src.config import IMAGES_FOLDER
 
 setu.create_folders()
 
@@ -45,7 +43,7 @@ def distribution(data, transformed=False, plt_show=True):
     for i, feature in enumerate(["capital-gain", "capital-loss"]):
         ax = fig.add_subplot(1, 2, i + 1)
         ax.hist(data[feature], bins=25, color="#00A0A0")
-        ax.set_title("'%s' Feature Distribution" % (feature), fontsize=14)
+        ax.set_title(f"'{feature}' Feature Distribution", fontsize=14)
         ax.set_xlabel("Value")
         ax.set_ylabel("Number of Records")
 
