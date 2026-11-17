@@ -19,6 +19,9 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/simonerigoni/finding_donors_project"
 Repository = "https://github.com/simonerigoni/finding_donors_project"
+Website = "https://www.simonerigoni.net/blog/finding-donors-for-charityml-project"
+Medium = "https://medium.com/data-science/finding-donors-for-charityml-project-e0f4a59dcea0"
+Blogspot = "https://simonerigoni01.blogspot.com/2024/05/ricerca-di-donatori-per-il-progetto.html"
 
 [dependency-groups]
 dev = [
